@@ -86,9 +86,8 @@
 			children = (
 				752FF03A2814013D005610FE /* Models */,
 				752FF02F2813F614005610FE /* Utilities */,
-				752FF01B2813F51A005610FE /* AppDelegate.swift */,
-				752FF01D2813F51A005610FE /* SceneDelegate.swift */,
-				752FF04B2814031C005610FE /* BaseViewController.swift */,
+				752FF051281408C7005610FE /* Delegates */,
+				752FF052281408D1005610FE /* BaseViewController */,
 				752FF04D2814084A005610FE /* Enter City View  */,
 				752FF04E2814085E005610FE /* Detail Weather View */,
 				752FF0212813F51A005610FE /* Main.storyboard */,
@@ -139,6 +138,23 @@
 				752FF04F28140875005610FE /* DetailWeatherViewController.swift */,
 			);
 			path = "Detail Weather View";
+			sourceTree = "<group>";
+		};
+		752FF051281408C7005610FE /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				752FF01B2813F51A005610FE /* AppDelegate.swift */,
+				752FF01D2813F51A005610FE /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		752FF052281408D1005610FE /* BaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				752FF04B2814031C005610FE /* BaseViewController.swift */,
+			);
+			path = BaseViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
