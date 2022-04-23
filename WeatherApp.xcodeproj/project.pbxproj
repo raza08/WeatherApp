@@ -27,6 +27,7 @@
 		752FF04A28140149005610FE /* Clouds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752FF04228140149005610FE /* Clouds.swift */; };
 		752FF04C2814031C005610FE /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752FF04B2814031C005610FE /* BaseViewController.swift */; };
 		752FF05028140875005610FE /* DetailWeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752FF04F28140875005610FE /* DetailWeatherViewController.swift */; };
+		752FF05528140969005610FE /* CityWeatherListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752FF05428140969005610FE /* CityWeatherListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		752FF04228140149005610FE /* Clouds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Clouds.swift; sourceTree = "<group>"; };
 		752FF04B2814031C005610FE /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		752FF04F28140875005610FE /* DetailWeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWeatherViewController.swift; sourceTree = "<group>"; };
+		752FF05428140969005610FE /* CityWeatherListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityWeatherListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 				752FF051281408C7005610FE /* Delegates */,
 				752FF052281408D1005610FE /* BaseViewController */,
 				752FF04D2814084A005610FE /* Enter City View  */,
+				752FF05328140946005610FE /* City Weather List View */,
 				752FF04E2814085E005610FE /* Detail Weather View */,
 				752FF0212813F51A005610FE /* Main.storyboard */,
 				752FF0242813F51C005610FE /* Assets.xcassets */,
@@ -155,6 +158,14 @@
 				752FF04B2814031C005610FE /* BaseViewController.swift */,
 			);
 			path = BaseViewController;
+			sourceTree = "<group>";
+		};
+		752FF05328140946005610FE /* City Weather List View */ = {
+			isa = PBXGroup;
+			children = (
+				752FF05428140969005610FE /* CityWeatherListViewController.swift */,
+			);
+			path = "City Weather List View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +247,7 @@
 				752FF0332813F974005610FE /* Constant.swift in Sources */,
 				752FF04928140149005610FE /* Weather.swift in Sources */,
 				752FF0372813FE41005610FE /* EnterCityViewModel.swift in Sources */,
+				752FF05528140969005610FE /* CityWeatherListViewController.swift in Sources */,
 				752FF04628140149005610FE /* List.swift in Sources */,
 				752FF04A28140149005610FE /* Clouds.swift in Sources */,
 				752FF01E2813F51A005610FE /* SceneDelegate.swift in Sources */,
