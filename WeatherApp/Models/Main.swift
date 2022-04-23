@@ -21,14 +21,26 @@ struct Main : Codable {
 	let humidity : Int?
 	let sea_level : Int?
 	let grnd_level : Int?
-    var getTemp: String?{
+    var getTempCelcius: String?{
         get {
             return String(format: "%.0f", (self.temp ?? 0.0) - 273.15)
         }
     }
-    var getFeelsLike: String?{
+    
+    var getTempFahrenhit: String?{
+        get {
+            return String(format: "%.0f", ((self.temp ?? 0.0) - 273.15) * 1.8 + 32)
+        }
+    }
+
+    var getFeelsLikeCelcius: String?{
         get {
             return String(format: "%.0f", (self.feels_like ?? 0.0) - 273.15)
+        }
+    }
+    var getFeelsLikeFahrenhit: String?{
+        get {
+            return String(format: "%.0f", ((self.feels_like ?? 0.0) - 273.15) * 1.8 + 32)
         }
     }
 

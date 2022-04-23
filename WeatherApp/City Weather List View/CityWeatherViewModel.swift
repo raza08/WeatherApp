@@ -9,7 +9,7 @@ import UIKit
 
 class CityWeatherViewModel {
 
-    var weatherReport : GetWeatherReport?
+    var weatherReport : WeatherReport?
     var mainListData = [List]()
     init() {
         

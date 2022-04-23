@@ -19,7 +19,7 @@ class EnterCityViewModel {
     var showErrorAlertMessage: ((_ message:String) -> Void)?
 
     var cityName = ""
-    var weatherReport : GetWeatherReport?
+    var weatherReport : WeatherReport?
     
     weak var delegate : NavigateDelegate?
     init() {
@@ -33,8 +33,8 @@ class EnterCityViewModel {
             completionhandler(true)
         }
         
-        let url = URL(string: "\(Constants.BaseURL)q=\(cityName)&appid=\(Constants.AppId)&units=metric&_=1650566508868")
-        URLSession.shared.request(url: url, expecting: GetWeatherReport.self) { result in
+        let url = URL(string: "\(Constants.openWeatherMapBaseURL)q=\(cityName)&appid=\(Constants.openWeatherMapAPIKey)&units=metric&_=1650566508868")
+        URLSession.shared.request(url: url, expecting: WeatherReport.self) { result in
             if let completionhandler = self.showHideCompletionHandler {
                 completionhandler(false)
             }

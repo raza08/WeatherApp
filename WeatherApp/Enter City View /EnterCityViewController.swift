@@ -19,7 +19,7 @@ class EnterCityViewController: BaseViewController {
         
         // Do any additional setup after loading the view.
         self.viewModelHandler()
-        
+        self.title = ""
     }
     
     
@@ -43,12 +43,17 @@ class EnterCityViewController: BaseViewController {
     
     @IBAction func onTapLookupButtonAction(_ sender: UIButton) {
         
-        guard let text = self.textFieldEnterCityName.text, text != "" else {
+        guard let text = self.textFieldEnterCityName.text else {
             self.presentMessage("Please enter city name!")
             return
         }
-        
-        self.viewModel.fetchWeatherReportFromCityName(cityName: text)
+        let resultText = text.filter { !$0.isWhitespace }
+        if resultText.count > 0 {
+            self.viewModel.fetchWeatherReportFromCityName(cityName: text)
+
+        }else {
+            self.presentMessage("Please enter city name!")
+        }
         
     }
     
@@ -62,6 +67,6 @@ extension EnterCityViewController : NavigateDelegate {
         let cityWeatherListViewController = CityWeatherListViewController.storyboardInstance(StoryboardName: .Main)
         cityWeatherListViewController.selectedCityWeather =  self.viewModel.weatherReport
         cityWeatherListViewController.cityName = self.viewModel.cityName + ", \(self.viewModel.weatherReport?.list?.first?.sys?.country ?? "")"
-        self.navigationController?.pushViewController(cityWeatherListViewController, animated: false)
+        self.navigationController?.pushViewController(cityWeatherListViewController, animated: true)
     }
 }

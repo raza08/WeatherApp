@@ -11,7 +11,7 @@ class CityWeatherListViewController: BaseViewController {
 
     
     let viewModel = CityWeatherViewModel()
-    var selectedCityWeather : GetWeatherReport?
+    var selectedCityWeather : WeatherReport?
     var cityName = ""
     
     @IBOutlet weak var mainTableView: UITableView!
@@ -71,7 +71,8 @@ extension CityWeatherListViewController : UITableViewDelegate {
         
         let detailWeatherViewController = DetailWeatherViewController.storyboardInstance(StoryboardName: .Main)
         detailWeatherViewController.selectedList =  self.dataSource.itemIdentifier(for: indexPath)
-        self.navigationController?.pushViewController(detailWeatherViewController, animated: false)
+        detailWeatherViewController.cityName = self.cityName
+        self.navigationController?.pushViewController(detailWeatherViewController, animated: true)
 
         
     }

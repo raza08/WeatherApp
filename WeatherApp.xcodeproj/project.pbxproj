@@ -22,7 +22,7 @@
 		752FF04528140149005610FE /* Wind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752FF03D28140148005610FE /* Wind.swift */; };
 		752FF04628140149005610FE /* List.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752FF03E28140149005610FE /* List.swift */; };
 		752FF04728140149005610FE /* Coord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752FF03F28140149005610FE /* Coord.swift */; };
-		752FF04828140149005610FE /* GetWeatherReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752FF04028140149005610FE /* GetWeatherReport.swift */; };
+		752FF04828140149005610FE /* WeatherReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752FF04028140149005610FE /* WeatherReport.swift */; };
 		752FF04928140149005610FE /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752FF04128140149005610FE /* Weather.swift */; };
 		752FF04A28140149005610FE /* Clouds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752FF04228140149005610FE /* Clouds.swift */; };
 		752FF04C2814031C005610FE /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752FF04B2814031C005610FE /* BaseViewController.swift */; };
@@ -51,7 +51,7 @@
 		752FF03D28140148005610FE /* Wind.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Wind.swift; sourceTree = "<group>"; };
 		752FF03E28140149005610FE /* List.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = List.swift; sourceTree = "<group>"; };
 		752FF03F28140149005610FE /* Coord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coord.swift; sourceTree = "<group>"; };
-		752FF04028140149005610FE /* GetWeatherReport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetWeatherReport.swift; sourceTree = "<group>"; };
+		752FF04028140149005610FE /* WeatherReport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherReport.swift; sourceTree = "<group>"; };
 		752FF04128140149005610FE /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		752FF04228140149005610FE /* Clouds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Clouds.swift; sourceTree = "<group>"; };
 		752FF04B2814031C005610FE /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -122,7 +122,7 @@
 			children = (
 				752FF04228140149005610FE /* Clouds.swift */,
 				752FF03F28140149005610FE /* Coord.swift */,
-				752FF04028140149005610FE /* GetWeatherReport.swift */,
+				752FF04028140149005610FE /* WeatherReport.swift */,
 				752FF03E28140149005610FE /* List.swift */,
 				752FF03B28140148005610FE /* Main.swift */,
 				752FF03C28140148005610FE /* Sys.swift */,
@@ -259,7 +259,7 @@
 			files = (
 				752FF05B28141B5F005610FE /* CityWeatherViewCell.swift in Sources */,
 				752FF057281409B0005610FE /* CityWeatherViewModel.swift in Sources */,
-				752FF04828140149005610FE /* GetWeatherReport.swift in Sources */,
+				752FF04828140149005610FE /* WeatherReport.swift in Sources */,
 				752FF0392813FEB5005610FE /* Utility.swift in Sources */,
 				752FF04528140149005610FE /* Wind.swift in Sources */,
 				752FF01C2813F51A005610FE /* AppDelegate.swift in Sources */,

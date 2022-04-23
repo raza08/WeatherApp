@@ -16,8 +16,8 @@ class CityWeatherViewCell: UITableViewCell {
         didSet {
             guard let list = list else { return  }
             self.labelWeather.text = list.weather?.first?.main ?? ""
-            self.labelWind.text = "Wind - \( list.wind?.speed ?? 0)"
-            self.labelTemp.text = " Temp - \( list.main?.getTemp ?? "")"
+            self.labelWind.text = "Wind - \( list.wind?.speed ?? 0) m/s"
+            self.labelTemp.text = " Temp - \( list.main?.getTempCelcius ?? "")°"
         }
     }
     
