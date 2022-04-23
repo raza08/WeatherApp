@@ -16,7 +16,6 @@ class Utility: NSObject {
     override init(){
 
     }
-        
     
     static func showLoading(color: UIColor = UIColor.white) {
         
@@ -25,12 +24,12 @@ class Utility: NSObject {
             {
                 self.mainView = UIView()
                 self.mainView.frame = UIScreen.main.bounds
-                self.mainView.backgroundColor = UIColor.lightGray
+                self.mainView.backgroundColor = UIColor.white
                 self.overlayView = UIView()
                 self.activityIndicator = UIActivityIndicatorView()
                 
                 overlayView.frame = CGRect(x: 0, y: 0, width: 80, height: 80)
-                overlayView.backgroundColor = UIColor(white: 0, alpha: 0.7)
+                overlayView.backgroundColor =  .lightGray//UIColor(white: 0, alpha: 0.7)
                 overlayView.clipsToBounds = true
                 overlayView.layer.cornerRadius = 10
                 overlayView.layer.zPosition = 1

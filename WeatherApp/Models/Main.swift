@@ -21,6 +21,17 @@ struct Main : Codable {
 	let humidity : Int?
 	let sea_level : Int?
 	let grnd_level : Int?
+    var getTemp: String?{
+        get {
+            return String(format: "%.0f", (self.temp ?? 0.0) - 273.15)
+        }
+    }
+    var getFeelsLike: String?{
+        get {
+            return String(format: "%.0f", (self.feels_like ?? 0.0) - 273.15)
+        }
+    }
+
 
 	enum CodingKeys: String, CodingKey {
 

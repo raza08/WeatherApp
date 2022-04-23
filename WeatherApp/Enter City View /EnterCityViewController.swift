@@ -8,7 +8,7 @@
 import UIKit
 
 class EnterCityViewController: BaseViewController {
-
+    
     @IBOutlet weak var buttonLookUp: UIButton!
     @IBOutlet weak var textFieldEnterCityName: UITextField!
     
@@ -16,15 +16,16 @@ class EnterCityViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         self.viewModelHandler()
         
     }
-
+    
     
     func viewModelHandler() {
         
+        self.viewModel.delegate = self
         self.viewModel.showHideCompletionHandler = { isShow in
             
             if isShow {
@@ -34,15 +35,9 @@ class EnterCityViewController: BaseViewController {
             }
         }
         
-        self.viewModel.gotoListScreenCompletionHandler = {
-            
+        self.viewModel.showErrorAlertMessage = { message in
+            self.presentMessage(message)
         }
-        
-        
-        self.viewModel.gotoListScreenCompletionHandler = {
-            
-        }
-
         
     }
     
@@ -57,4 +52,16 @@ class EnterCityViewController: BaseViewController {
         
     }
     
+}
+
+
+extension EnterCityViewController : NavigateDelegate {
+    
+    func navigateToNextScreen() {
+        
+        let cityWeatherListViewController = CityWeatherListViewController.storyboardInstance(StoryboardName: .Main)
+        cityWeatherListViewController.selectedCityWeather =  self.viewModel.weatherReport
+        cityWeatherListViewController.cityName = self.viewModel.cityName + ", \(self.viewModel.weatherReport?.list?.first?.sys?.country ?? "")"
+        self.navigationController?.pushViewController(cityWeatherListViewController, animated: false)
+    }
 }

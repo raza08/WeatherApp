@@ -12,7 +12,16 @@ For support, please feel free to contact me at https://www.linkedin.com/in/syeda
 */
 
 import Foundation
-struct List : Codable {
+struct List : Codable,Hashable {
+    
+    static func == (lhs: List, rhs: List) -> Bool {
+        lhs.id == rhs.id
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(self.id)
+    }
+    
 	let id : Int?
 	let name : String?
 	let coord : Coord?
@@ -40,5 +49,19 @@ struct List : Codable {
 		case weather = "weather"
 	}
 
+	init(from decoder: Decoder) throws {
+		let values = try decoder.container(keyedBy: CodingKeys.self)
+		id = try values.decodeIfPresent(Int.self, forKey: .id)
+		name = try values.decodeIfPresent(String.self, forKey: .name)
+		coord = try values.decodeIfPresent(Coord.self, forKey: .coord)
+		main = try values.decodeIfPresent(Main.self, forKey: .main)
+		dt = try values.decodeIfPresent(Int.self, forKey: .dt)
+		wind = try values.decodeIfPresent(Wind.self, forKey: .wind)
+		sys = try values.decodeIfPresent(Sys.self, forKey: .sys)
+		rain = try values.decodeIfPresent(String.self, forKey: .rain)
+		snow = try values.decodeIfPresent(String.self, forKey: .snow)
+		clouds = try values.decodeIfPresent(Clouds.self, forKey: .clouds)
+		weather = try values.decodeIfPresent([Weather].self, forKey: .weather)
+	}
 
 }
