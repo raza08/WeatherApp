@@ -34,6 +34,16 @@ class EnterCityViewController: BaseViewController {
             }
         }
         
+        self.viewModel.gotoListScreenCompletionHandler = {
+            
+        }
+        
+        
+        self.viewModel.gotoListScreenCompletionHandler = {
+            
+        }
+
+        
     }
     
     @IBAction func onTapLookupButtonAction(_ sender: UIButton) {

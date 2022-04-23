@@ -26,6 +26,7 @@
 		752FF04928140149005610FE /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752FF04128140149005610FE /* Weather.swift */; };
 		752FF04A28140149005610FE /* Clouds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752FF04228140149005610FE /* Clouds.swift */; };
 		752FF04C2814031C005610FE /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752FF04B2814031C005610FE /* BaseViewController.swift */; };
+		752FF05028140875005610FE /* DetailWeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752FF04F28140875005610FE /* DetailWeatherViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		752FF04128140149005610FE /* Weather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		752FF04228140149005610FE /* Clouds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Clouds.swift; sourceTree = "<group>"; };
 		752FF04B2814031C005610FE /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		752FF04F28140875005610FE /* DetailWeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailWeatherViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,8 +89,8 @@
 				752FF01B2813F51A005610FE /* AppDelegate.swift */,
 				752FF01D2813F51A005610FE /* SceneDelegate.swift */,
 				752FF04B2814031C005610FE /* BaseViewController.swift */,
-				752FF0342813F9CD005610FE /* EnterCityViewController.swift */,
-				752FF0362813FE41005610FE /* EnterCityViewModel.swift */,
+				752FF04D2814084A005610FE /* Enter City View  */,
+				752FF04E2814085E005610FE /* Detail Weather View */,
 				752FF0212813F51A005610FE /* Main.storyboard */,
 				752FF0242813F51C005610FE /* Assets.xcassets */,
 				752FF0262813F51C005610FE /* LaunchScreen.storyboard */,
@@ -120,6 +122,23 @@
 				752FF03D28140148005610FE /* Wind.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		752FF04D2814084A005610FE /* Enter City View  */ = {
+			isa = PBXGroup;
+			children = (
+				752FF0342813F9CD005610FE /* EnterCityViewController.swift */,
+				752FF0362813FE41005610FE /* EnterCityViewModel.swift */,
+			);
+			path = "Enter City View ";
+			sourceTree = "<group>";
+		};
+		752FF04E2814085E005610FE /* Detail Weather View */ = {
+			isa = PBXGroup;
+			children = (
+				752FF04F28140875005610FE /* DetailWeatherViewController.swift */,
+			);
+			path = "Detail Weather View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,6 +226,7 @@
 				752FF0352813F9CD005610FE /* EnterCityViewController.swift in Sources */,
 				752FF04728140149005610FE /* Coord.swift in Sources */,
 				752FF04C2814031C005610FE /* BaseViewController.swift in Sources */,
+				752FF05028140875005610FE /* DetailWeatherViewController.swift in Sources */,
 				752FF0312813F946005610FE /* Extension.swift in Sources */,
 				752FF04428140149005610FE /* Sys.swift in Sources */,
 			);

@@ -11,6 +11,7 @@ class EnterCityViewModel {
 
     var showHideCompletionHandler: ((_ isShow : Bool) -> Void)?
     var gotoListScreenCompletionHandler: (() -> Void)?
+    var showErrorAlertMessage: (() -> String)?
 
     var weatherReport : GetWeatherReport?
     init() {
@@ -33,15 +34,20 @@ class EnterCityViewModel {
             switch result {
             case .success(let weatherReport):
                 self.weatherReport = weatherReport
-                if let completionhandler = self.gotoListScreenCompletionHandler {
-                    completionhandler()
+                
+                if let code = self.weatherReport?.cod, code == "200" {
+                    
+                    if let completionhandler = self.gotoListScreenCompletionHandler {
+                        completionhandler()
+                    }
+                }else {
+                    print(self.weatherReport?.message)
                 }
+                
 
             case .failure(let error):
                 print(error.localizedDescription)
 
-            default:break
-                
             }
             
 

@@ -25,7 +25,7 @@ class Utility: NSObject {
             {
                 self.mainView = UIView()
                 self.mainView.frame = UIScreen.main.bounds
-                self.mainView.backgroundColor = UIColor.clear
+                self.mainView.backgroundColor = UIColor.lightGray
                 self.overlayView = UIView()
                 self.activityIndicator = UIActivityIndicatorView()
                 
